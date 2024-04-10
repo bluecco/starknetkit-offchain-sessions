@@ -79,6 +79,7 @@ export default function Home() {
             Last tx hash: {lastTransactionHash || "---"}
           </div>
           <div>Tx status: {transactionStatus}</div>
+          <div color="##ff4848">{transactionError.toString()}</div>
 
           <div className="flex flex-col text-black max-w-96">
             <OffchainSessionKeysSign

@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   '@argent/x-sessions':
-    specifier: ^6.5.4
-    version: 6.5.4(@scure/base@1.1.6)(@scure/bip39@1.3.0)(lodash-es@4.17.21)(object-hash@3.0.0)(react-dom@18.2.0)(react-router-dom@6.22.3)(react@18.2.0)(swr@1.3.0)(typescript@5.4.3)(zod@3.22.4)
+    specifier: ^6.5.5
+    version: 6.5.5(@scure/base@1.1.6)(@scure/bip39@1.3.0)(lodash-es@4.17.21)(object-hash@3.0.0)(react-dom@18.2.0)(react-router-dom@6.22.3)(react@18.2.0)(swr@1.3.0)(typescript@5.4.3)(zod@3.22.4)
   get-starknet-core:
     specifier: ^3.2.0
-    version: 3.2.0(starknet@6.2.0)
+    version: 3.2.0(starknet@6.7.0)
   micro-starknet:
     specifier: ^0.2.3
     version: 0.2.3
@@ -24,11 +24,11 @@ dependencies:
     specifier: ^18
     version: 18.2.0(react@18.2.0)
   starknet:
-    specifier: ^6.2.0
-    version: 6.2.0
+    specifier: ^6.7.0
+    version: 6.7.0
   starknetkit:
-    specifier: ^1.1.5
-    version: 1.1.5(starknet@6.2.0)
+    specifier: ^1.1.8
+    version: 1.1.8(starknet@6.7.0)
 
 devDependencies:
   '@types/node':
@@ -80,12 +80,12 @@ packages:
       typescript: 5.4.3
     dev: false
 
-  /@argent/x-sessions@6.5.4(@scure/base@1.1.6)(@scure/bip39@1.3.0)(lodash-es@4.17.21)(object-hash@3.0.0)(react-dom@18.2.0)(react-router-dom@6.22.3)(react@18.2.0)(swr@1.3.0)(typescript@5.4.3)(zod@3.22.4):
-    resolution: {integrity: sha512-miI+lI63kZNWzGw/f8kLtEU2sCpBn8sW7wG7z/y5QrgsN4s2ocp8ZmFhJUqCxW+Ps8T+XcMt3LAcAtfUlTfp7A==}
+  /@argent/x-sessions@6.5.5(@scure/base@1.1.6)(@scure/bip39@1.3.0)(lodash-es@4.17.21)(object-hash@3.0.0)(react-dom@18.2.0)(react-router-dom@6.22.3)(react@18.2.0)(swr@1.3.0)(typescript@5.4.3)(zod@3.22.4):
+    resolution: {integrity: sha512-n6jk19VXQ7usc/ex5ziAn2pNZ3xPDl8Nd4G64+AlbfMOuOUwvqqkUGcMOmBy+e13wjLHEtCR/Gq6OTiZRARa7Q==}
     dependencies:
-      '@argent/x-shared': 1.12.0(@scure/base@1.1.6)(@scure/bip39@1.3.0)(lodash-es@4.17.21)(object-hash@3.0.0)(react-dom@18.2.0)(react-router-dom@6.22.3)(react@18.2.0)(swr@1.3.0)(typescript@5.4.3)(zod@3.22.4)
+      '@argent/x-shared': 1.13.4(@scure/base@1.1.6)(@scure/bip39@1.3.0)(lodash-es@4.17.21)(object-hash@3.0.0)(react-dom@18.2.0)(react-router-dom@6.22.3)(react@18.2.0)(swr@1.3.0)(typescript@5.4.3)(zod@3.22.4)
       minimalistic-assert: 1.0.1
-      starknet: 6.2.0
+      starknet: 6.7.0
       starknet4: /starknet@4.22.0
       starknet5: /starknet@5.25.0
     transitivePeerDependencies:
@@ -103,8 +103,8 @@ packages:
       - zod
     dev: false
 
-  /@argent/x-shared@1.12.0(@scure/base@1.1.6)(@scure/bip39@1.3.0)(lodash-es@4.17.21)(object-hash@3.0.0)(react-dom@18.2.0)(react-router-dom@6.22.3)(react@18.2.0)(swr@1.3.0)(typescript@5.4.3)(zod@3.22.4):
-    resolution: {integrity: sha512-JyS0XXIH95QHvfrBkyMxP8fbtX7FCIQNrlHsCk8Ca8k9QZY0E+FvAoULk5megh8mkgvnhZrTjzWqx5mPRzBVDg==}
+  /@argent/x-shared@1.13.4(@scure/base@1.1.6)(@scure/bip39@1.3.0)(lodash-es@4.17.21)(object-hash@3.0.0)(react-dom@18.2.0)(react-router-dom@6.22.3)(react@18.2.0)(swr@1.3.0)(typescript@5.4.3)(zod@3.22.4):
+    resolution: {integrity: sha512-k/nPo9R6fhWNlncNkVMBmGHD4yXtvMKrgbXPyNCS4vfOmOv6h7dGyusMK9UyCqnRIbe9Mq4otp4TjBXJxKAzjg==}
     peerDependencies:
       '@scure/base': ^1.1.1
       '@scure/bip39': ^1.2.1
@@ -117,7 +117,7 @@ packages:
       zod: ^3.20.6
     dependencies:
       '@argent/x-multicall': 7.1.0(typescript@5.4.3)
-      '@noble/hashes': 1.3.3
+      '@noble/hashes': 1.4.0
       '@scure/base': 1.1.6
       '@scure/bip39': 1.3.0
       big-decimal-number: /bignumber.js@9.1.2
@@ -127,7 +127,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-router-dom: 6.22.3(react-dom@18.2.0)(react@18.2.0)
-      starknet: 6.4.2
+      starknet: 6.7.0
       starknet4-deprecated: /starknet@4.4.0
       starknet5: /starknet@5.25.0
       swr: 1.3.0(react@18.2.0)
@@ -359,6 +359,12 @@ packages:
       '@noble/hashes': 1.3.3
     dev: false
 
+  /@noble/curves@1.4.0:
+    resolution: {integrity: sha512-p+4cb332SFCrReJkCYe8Xzm0OWi4Jji5jVdIZRL/PmacmDkFNw6MrrV+gGpiPxLHbV+zKFRywUWbaseT+tZRXg==}
+    dependencies:
+      '@noble/hashes': 1.4.0
+    dev: false
+
   /@noble/hashes@1.2.0:
     resolution: {integrity: sha512-FZfhjEDbT5GRswV3C6uvLPHMiVD6lQBmpoX5+eSiPaMTXte/IKqI5dykDxzZB/WBeK/CDuQRBWarPdi3FNY2zQ==}
     dev: false
@@ -399,8 +405,8 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  /@oclif/core@3.26.0:
-    resolution: {integrity: sha512-TpMdfD4tfA2tVVbd4l0PrP02o5KoUXYmudBbTC7CeguDo/GLoprw4uL8cMsaVA26+cbcy7WYtOEydQiHVtJixA==}
+  /@oclif/core@3.26.2:
+    resolution: {integrity: sha512-Gpn21jKjcOx0TecI1wLJrY/65jtgJx5f1GzTc81oKvEpKes1b3Li2SMZygRaWRpcQ3wjN0d7lTPi8WwLsmTBjA==}
     engines: {node: '>=18.0.0'}
     dependencies:
       '@types/cli-progress': 3.11.5
@@ -866,8 +872,8 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@walletconnect/core@2.12.0:
-    resolution: {integrity: sha512-CORck4dRvCpIn6hl2ZtUnjrSJ0JHt9TRteGCViwPyXNSuvXz70RvaIkvPoybYZBGCRQR4WTJ4dMdqeQpuyrL/g==}
+  /@walletconnect/core@2.12.2:
+    resolution: {integrity: sha512-7Adv/b3pp9F42BkvReaaM4KS8NEvlkS7AMtwO3uF/o6aRMKtcfTJq9/jgWdKJh4RP8pPRTRFjCw6XQ/RZtT4aQ==}
     dependencies:
       '@walletconnect/heartbeat': 1.2.1
       '@walletconnect/jsonrpc-provider': 1.0.13
@@ -875,13 +881,13 @@ packages:
       '@walletconnect/jsonrpc-utils': 1.0.8
       '@walletconnect/jsonrpc-ws-connection': 1.0.14
       '@walletconnect/keyvaluestorage': 1.1.1
-      '@walletconnect/logger': 2.1.0
+      '@walletconnect/logger': 2.1.2
       '@walletconnect/relay-api': 1.0.9
       '@walletconnect/relay-auth': 1.0.4
       '@walletconnect/safe-json': 1.0.2
       '@walletconnect/time': 1.0.2
-      '@walletconnect/types': 2.12.0
-      '@walletconnect/utils': 2.12.0
+      '@walletconnect/types': 2.12.2
+      '@walletconnect/utils': 2.12.2
       events: 3.3.0
       isomorphic-unfetch: 3.1.0
       lodash.isequal: 4.5.0
@@ -989,15 +995,8 @@ packages:
       - uWebSockets.js
     dev: false
 
-  /@walletconnect/logger@2.0.1:
-    resolution: {integrity: sha512-SsTKdsgWm+oDTBeNE/zHxxr5eJfZmE9/5yp/Ku+zJtcTAjELb3DXueWkDXmE9h8uHIbJzIb5wj5lPdzyrjT6hQ==}
-    dependencies:
-      pino: 7.11.0
-      tslib: 1.14.1
-    dev: false
-
-  /@walletconnect/logger@2.1.0:
-    resolution: {integrity: sha512-lyCRHlxlBHxvj1fJXa2YOW4whVNucPKF7Oc0D1UvYhfArpIIjlJJiTe5cLm8g4ZH4z5lKp14N/c9oRHlyv5v4A==}
+  /@walletconnect/logger@2.1.2:
+    resolution: {integrity: sha512-aAb28I3S6pYXZHQm5ESB+V6rDqIYfsnHaQyzFbwUUBFY4H0OXx/YtTl8lvhUNhMMfb9UxbwEBS253TlXUYJWSw==}
     dependencies:
       '@walletconnect/safe-json': 1.0.2
       pino: 7.11.0
@@ -1027,17 +1026,17 @@ packages:
       tslib: 1.14.1
     dev: false
 
-  /@walletconnect/sign-client@2.12.0:
-    resolution: {integrity: sha512-JUHJVZtW9iJmn3I2byLzhMRSFiQicTPU92PLuHIF2nG98CqsvlPn8Cu8Cx5CEPFrxPQWwLA+Dv/F+wuSgQiD/w==}
+  /@walletconnect/sign-client@2.12.2:
+    resolution: {integrity: sha512-cM0ualXj6nVvLqS4BDNRk+ZWR+lubcsz/IHreH+3wYrQ2sV+C0fN6ctrd7MMGZss0C0qacWCx0pm62ZBuoKvqA==}
     dependencies:
-      '@walletconnect/core': 2.12.0
+      '@walletconnect/core': 2.12.2
       '@walletconnect/events': 1.0.1
       '@walletconnect/heartbeat': 1.2.1
       '@walletconnect/jsonrpc-utils': 1.0.8
-      '@walletconnect/logger': 2.0.1
+      '@walletconnect/logger': 2.1.2
       '@walletconnect/time': 1.0.2
-      '@walletconnect/types': 2.12.0
-      '@walletconnect/utils': 2.12.0
+      '@walletconnect/types': 2.12.2
+      '@walletconnect/utils': 2.12.2
       events: 3.3.0
     transitivePeerDependencies:
       - '@azure/app-configuration'
@@ -1065,14 +1064,14 @@ packages:
       tslib: 1.14.1
     dev: false
 
-  /@walletconnect/types@2.12.0:
-    resolution: {integrity: sha512-uhB3waGmujQVJcPgJvGOpB8RalgYSBT+HpmVbfl4Qe0xJyqpRUo4bPjQa0UYkrHaW20xIw94OuP4+FMLYdeemg==}
+  /@walletconnect/types@2.12.2:
+    resolution: {integrity: sha512-9CmwTlPbrFTzayTL9q7xM7s3KTJkS6kYFtH2m1/fHFgALs6pIUjf1qAx1TF2E4tv7SEzLAIzU4NqgYUt2vWXTg==}
     dependencies:
       '@walletconnect/events': 1.0.1
       '@walletconnect/heartbeat': 1.2.1
       '@walletconnect/jsonrpc-types': 1.0.3
       '@walletconnect/keyvaluestorage': 1.1.1
-      '@walletconnect/logger': 2.0.1
+      '@walletconnect/logger': 2.1.2
       events: 3.3.0
     transitivePeerDependencies:
       - '@azure/app-configuration'
@@ -1091,8 +1090,8 @@ packages:
       - uWebSockets.js
     dev: false
 
-  /@walletconnect/utils@2.12.0:
-    resolution: {integrity: sha512-GIpfHUe1Bjp1Tjda0SkJEizKOT2biuv7VPFnKsOLT1T+8QxEP9NruC+K2UUEvijS1Qr/LKH9P5004RYNgrch+w==}
+  /@walletconnect/utils@2.12.2:
+    resolution: {integrity: sha512-zf50HeS3SfoLv1N9GPl2IXTZ9TsXfet4usVAsZmX9P6/Xzq7d/7QakjVQCHH/Wk1O9XkcsfeoZoUhRxoMJ5uJw==}
     dependencies:
       '@stablelib/chacha20poly1305': 1.0.1
       '@stablelib/hkdf': 1.0.1
@@ -1102,7 +1101,7 @@ packages:
       '@walletconnect/relay-api': 1.0.9
       '@walletconnect/safe-json': 1.0.2
       '@walletconnect/time': 1.0.2
-      '@walletconnect/types': 2.12.0
+      '@walletconnect/types': 2.12.2
       '@walletconnect/window-getters': 1.0.1
       '@walletconnect/window-metadata': 1.0.1
       detect-browser: 5.3.0
@@ -2504,12 +2503,12 @@ packages:
     resolution: {integrity: sha512-Gxc29eLs1fbn6LQ4jSU4vXjlwyZhF5HsGuMAa7gqBP4Rw4yxxltyDUuF5MBclFzDTXO+ACchGQoeela4DSfzdQ==}
     dev: false
 
-  /get-starknet-core@3.2.0(starknet@6.2.0):
+  /get-starknet-core@3.2.0(starknet@6.7.0):
     resolution: {integrity: sha512-SZhxtLlKoPKLZ2H3l9WIU7CiNmkL3qLWGksALmvZdAXa/9PykYfLtvIB5B8A2UZMpf2ojTZlWLfuo1KhgmVobA==}
     peerDependencies:
       starknet: ^5.18.0
     dependencies:
-      starknet: 6.2.0
+      starknet: 6.7.0
     dev: false
 
   /get-stream@8.0.1:
@@ -4230,6 +4229,10 @@ packages:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
     dev: false
 
+  /starknet-types@0.0.4:
+    resolution: {integrity: sha512-PklqFeSp9gMqbzW5IbO8l1s3xsNZYkNG/x/gsytgYCIl6H/cqiwCZolVTneyTibvrdHOQ8kP3PXwfdsypudYqw==}
+    dev: false
+
   /starknet@4.22.0:
     resolution: {integrity: sha512-jC9Taxb6a/ht9zmS1LU/DSLfwJKpgCJnE9AktVksc5SE/+jQMpqxsq6fm7PRiqupjiqRC1DOS8N47cj+KaGv4Q==}
     dependencies:
@@ -4280,10 +4283,10 @@ packages:
       - encoding
     dev: false
 
-  /starknet@6.2.0:
-    resolution: {integrity: sha512-uxmTewT676hkxrA48Ds8sZyBks2ZdANUSA7UNwsb+ccDybGUFYwXpqftB9F6HVEulTAdJMEdiJYRiPPbLEerrg==}
+  /starknet@6.7.0:
+    resolution: {integrity: sha512-8NMedKBfkg/oZUgTYNw9lKeNoNYakL/Roah2HwKzrVyvDxBs0arrNrR8No8+tTq0wQg0HGu1w+JIObynjHAK3w==}
     dependencies:
-      '@noble/curves': 1.3.0
+      '@noble/curves': 1.4.0
       '@scure/base': 1.1.6
       '@scure/starknet': 1.0.0
       abi-wan-kanabi: 2.2.2
@@ -4291,44 +4294,28 @@ packages:
       isomorphic-fetch: 3.0.0
       lossless-json: 4.0.1
       pako: 2.1.0
+      starknet-types: 0.0.4
       ts-mixer: 6.0.4
       url-join: 4.0.1
     transitivePeerDependencies:
       - encoding
     dev: false
 
-  /starknet@6.4.2:
-    resolution: {integrity: sha512-O6WTOdPnXagyJjqBhzBgz92awSX18OTqxbyyItiEseBFDZc4Nn6qq8J/oSJYZ6lIpS56xxADhDBXDswqLlugug==}
-    dependencies:
-      '@noble/curves': 1.3.0
-      '@scure/base': 1.1.6
-      '@scure/starknet': 1.0.0
-      abi-wan-kanabi: 2.2.2
-      fetch-cookie: 3.0.1
-      isomorphic-fetch: 3.0.0
-      lossless-json: 4.0.1
-      pako: 2.1.0
-      ts-mixer: 6.0.4
-      url-join: 4.0.1
-    transitivePeerDependencies:
-      - encoding
-    dev: false
-
-  /starknetkit@1.1.5(starknet@6.2.0):
-    resolution: {integrity: sha512-XhprVEkMUzLp5SSvOF304ZfSWM/VWH91FbNtRZ0BmPeAygSJmQvzuiW1aRwFJW/Pq0ZHk0IjayEYVn/hUy9BSg==}
+  /starknetkit@1.1.8(starknet@6.7.0):
+    resolution: {integrity: sha512-Dw/EdpesoMEzkSmM/wLV10naie38z7FXOQgt4QHRrNM91H4EO96cb6ojNTVUmEwcLr/zyl7+P0faHcrxDeyxGg==}
     peerDependencies:
-      starknet: ^6.2.0
+      starknet: ^6.7.0
     dependencies:
       '@trpc/client': 10.45.2(@trpc/server@10.45.2)
       '@trpc/server': 10.45.2
-      '@walletconnect/sign-client': 2.12.0
+      '@walletconnect/sign-client': 2.12.2
       bowser: 2.11.0
       detect-browser: 5.3.0
       eventemitter3: 5.0.1
       events: 3.3.0
-      get-starknet-core: 3.2.0(starknet@6.2.0)
+      get-starknet-core: 3.2.0(starknet@6.7.0)
       lodash-es: 4.17.21
-      starknet: 6.2.0
+      starknet: 6.7.0
       svelte-forms: 2.3.1
       trpc-browser: 1.3.7(@trpc/client@10.45.2)(@trpc/server@10.45.2)
     transitivePeerDependencies:
@@ -4687,7 +4674,7 @@ packages:
     resolution: {integrity: sha512-gfLezRXnzlBIdaqd9L26HmX0qGATdudP/a6wnc8daNL+0kk7/47LlpfF46KsWJsQ8rH9hPBgsZcQLX3QDdeVQQ==}
     hasBin: true
     dependencies:
-      '@oclif/core': 3.26.0
+      '@oclif/core': 3.26.2
       '@typescript/vfs': 1.5.0
       case: 1.6.3
       chokidar: 3.6.0

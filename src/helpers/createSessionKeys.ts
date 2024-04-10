@@ -1,5 +1,5 @@
 import { ETHTokenAddress } from "@/constants";
-import { createOffchainSession, createOffchainSessionV5 } from "@argent/x-sessions";
+import { createOffchainSessionV5 } from "@argent/x-sessions";
 import { AccountInterface, num } from "starknet";
 import { parseUnits } from "./token";
 

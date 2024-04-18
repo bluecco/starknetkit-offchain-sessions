@@ -1,18 +1,21 @@
-import { createSessionAccount } from "@argent/x-sessions";
+import { CreateSessionOptions, SessionParams, createSessionAccount } from "@argent/x-sessions";
 import { FC } from "react";
-import { Account, AccountInterface } from "starknet";
+import { Account } from "starknet";
 
 import { ETHTokenAddress, provider } from "@/constants";
 import { Status } from "@/helpers/status";
+import { StarknetWindowObject } from "starknetkit";
+import { StarknetWindowObject as StarknetWindowObjectSN } from "starknet-types";
+import { parseUnits } from "@/helpers/token";
 
 interface HybridSessionKeysSignProps {
-  account: AccountInterface;
+  wallet: StarknetWindowObject;
   setTransactionStatus: (status: Status) => void;
   setHybridSessionAccount: (account: Account) => void;
 }
 
 const HybridSessionKeysSign: FC<HybridSessionKeysSignProps> = ({
-  account,
+  wallet,
   setTransactionStatus,
   setHybridSessionAccount,
 }) => {
@@ -20,17 +23,34 @@ const HybridSessionKeysSign: FC<HybridSessionKeysSignProps> = ({
     try {
       e.preventDefault();
       setTransactionStatus("approve");
-      setHybridSessionAccount(
-        await createSessionAccount({
-          provider: provider as any,
-          account: account as any,
-          allowedMethods: [
+
+      const sessionParams: SessionParams = {
+        allowedMethods: [
+          {
+            "Contract Address": ETHTokenAddress,
+            selector: "transfer",
+          },
+        ],
+        expiry: Math.floor((Date.now() + 1000 * 60 * 60 * 24) / 1000) as any,
+        metaData: {
+          projectID: "test-dapp",
+          txFees: [
             {
-              "Contract Address": ETHTokenAddress,
-              selector: "transfer",
+              tokenAddress: ETHTokenAddress,
+              maxAmount: parseUnits("0.1", 18).value.toString(),
             },
           ],
-          expiry: Math.floor((Date.now() + 1000 * 60 * 60 * 24) / 1000) as any,
+        },
+      };
+
+      const options: CreateSessionOptions = { wallet: wallet as StarknetWindowObjectSN, useWalletRequestMethods: true };
+
+      setHybridSessionAccount(
+        await createSessionAccount({
+          provider,
+          account: wallet.account,
+          sessionParams,
+          options,
         })
       );
 

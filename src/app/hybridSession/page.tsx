@@ -63,7 +63,7 @@ export default function HybridSession() {
 
           <div className="flex flex-col text-black max-w-96">
             <HybridSessionKeysSign
-              account={connectedWallet.account as any}
+              wallet={connectedWallet}
               setTransactionStatus={setTransactionStatus}
               setHybridSessionAccount={setHybridSessionAccount}
             />

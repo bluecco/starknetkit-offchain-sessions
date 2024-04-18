@@ -1,13 +1,9 @@
-import { OffchainSessionAccountV5, createSessionAccount } from "@argent/x-sessions";
-import { FC, useState } from "react";
-import { Account, AccountInterface, RpcProvider } from "starknet";
+import { createSessionAccount } from "@argent/x-sessions";
+import { FC } from "react";
+import { Account, AccountInterface } from "starknet";
 
-import { StarknetWindowObject } from "get-starknet-core";
-import { getStarkKey, utils } from "micro-starknet";
-import { createSessionKeys } from "@/helpers/createSessionKeys";
-import { Status } from "@/helpers/status";
 import { ETHTokenAddress, provider } from "@/constants";
-import { parseInputAmountToUint256 } from "@/helpers/token";
+import { Status } from "@/helpers/status";
 
 interface HybridSessionKeysSignProps {
   account: AccountInterface;
@@ -20,8 +16,6 @@ const HybridSessionKeysSign: FC<HybridSessionKeysSignProps> = ({
   setTransactionStatus,
   setHybridSessionAccount,
 }) => {
-  const [allowedFees, setAllowedFees] = useState("");
-
   const handleCreateSessionSubmit = async (e: React.FormEvent) => {
     try {
       e.preventDefault();

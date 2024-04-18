@@ -1,6 +1,6 @@
 import { OffchainSessionAccountV5 } from "@argent/x-sessions";
 import { FC, useState } from "react";
-import { Abi, AccountInterface, CallData, Contract, constants } from "starknet";
+import { Abi, Account, AccountInterface, CallData, Contract, constants } from "starknet";
 
 import Erc20Abi from "../abi/ERC20.json";
 
@@ -8,34 +8,34 @@ import { ETHTokenAddress } from "@/constants";
 import { parseInputAmountToUint256 } from "@/helpers/token";
 import { Status } from "@/helpers/status";
 
-interface OffchainSessionKeysExecuteProps {
+interface HybridSessionKeysExecuteProps {
   account: AccountInterface;
+  sessionAccount: Account | undefined;
   setTransactionStatus: (status: Status) => void;
   setLastTransactionHash: (tx: string) => void;
   transactionStatus: Status;
-  offchainSessionAccount: OffchainSessionAccountV5 | undefined;
 }
 
-const OffchainSessionKeysExecute: FC<OffchainSessionKeysExecuteProps> = ({
+const HybridSessionKeysExecute: FC<HybridSessionKeysExecuteProps> = ({
   account,
   setTransactionStatus,
   transactionStatus,
   setLastTransactionHash,
-  offchainSessionAccount,
+  sessionAccount,
 }) => {
   const [transferOffchainSessionAmount, setTransferOffchainSessionAmount] = useState("");
 
-  const buttonsDisabled = ["approve", "pending"].includes(transactionStatus) || !offchainSessionAccount;
+  const buttonsDisabled = ["approve", "pending"].includes(transactionStatus) || !sessionAccount;
 
   const handleOffchainSessionTransaction = async (e: React.FormEvent) => {
     try {
       e.preventDefault();
       setTransactionStatus("pending");
-      if (!offchainSessionAccount) {
+      if (!sessionAccount) {
         throw new Error("No open session");
       }
 
-      const erc20Contract = new Contract(Erc20Abi as Abi, ETHTokenAddress, offchainSessionAccount as any);
+      const erc20Contract = new Contract(Erc20Abi as Abi, ETHTokenAddress, sessionAccount as any);
 
       // send to same account
       const result = await erc20Contract.transfer(
@@ -54,7 +54,6 @@ const OffchainSessionKeysExecute: FC<OffchainSessionKeysExecuteProps> = ({
   return (
     <form className="flex flex-col p-4 gap-3" onSubmit={handleOffchainSessionTransaction}>
       <h2 className="text-white">Use session keys</h2>
-
       <input
         className="p-2 rounded-lg"
         type="text"
@@ -62,14 +61,18 @@ const OffchainSessionKeysExecute: FC<OffchainSessionKeysExecuteProps> = ({
         name="fname"
         placeholder="Amount"
         value={transferOffchainSessionAmount}
-        disabled={!offchainSessionAccount}
+        disabled={!sessionAccount}
         onChange={(e) => setTransferOffchainSessionAmount(e.target.value)}
       />
-      <button className="bg-blue-300 p-2 rounded-lg" type="submit" disabled={buttonsDisabled}>
-        Transfer with session keys
+      <button
+        className={`${buttonsDisabled ? "opacity-30 text-white" : "bg-blue-300"} p-2 rounded-lg`}
+        type="submit"
+        disabled={buttonsDisabled}
+      >
+        Transfer with session
       </button>
     </form>
   );
 };
 
-export { OffchainSessionKeysExecute };
+export { HybridSessionKeysExecute };

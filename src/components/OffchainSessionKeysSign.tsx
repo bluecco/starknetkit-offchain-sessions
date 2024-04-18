@@ -48,7 +48,7 @@ const OffchainSessionKeysSign: FC<OffchainSessionKeysSignProps> = ({
 
   return (
     <form onSubmit={handleCreateSessionSubmit} className="flex flex-col p-4 gap-3">
-      <h2>Create session keys</h2>
+      <h2 className="text-white">Create session keys</h2>
       <input
         className="p-2 rounded-lg"
         type="text"
